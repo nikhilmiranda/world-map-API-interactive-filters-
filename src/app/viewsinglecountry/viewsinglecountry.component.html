@@ -1,0 +1,115 @@
+<div *ngFor="let country of countryList">
+  <div *ngIf="country.name == countryName">
+    <div class="container-fluid mx-auto p-5 d-block">
+      <div class=" shadow-lg mb-5 bg-white rounded card border border-dark ">
+        <div class="card-header text-center" style="font-weight: 500; font-size: 190%">
+          {{country.name | uppercase}}
+        </div>
+        <img class="pt-3 mx-auto d-block p-5 img-fluid" src={{country.flag}}>
+
+        <div class="card-body text-center table-responsive rounded">
+          <table class="table table-dark mx-auto table-hover rounded">
+            <tbody>
+              <tr>
+                <td>Official Web Domain Extension</td>
+                <td> {{country.topLevelDomain}}</td>
+              </tr>
+              <tr>
+                <td>Capital</td>
+                <td>{{country.capital}}</td>
+              </tr>
+              <tr>
+                <td>Alternate Spelling</td>
+                <td>{{country.altSpellings}}</td>
+              </tr>
+              <tr>
+                <td>Region</td>
+                <td>{{country.region}}</td>
+              </tr>
+              <tr>
+                <td>Sub Region</td>
+                <td>{{country.subregion}}</td>
+              </tr>
+              <tr>
+                <td>Population</td>
+                <td>{{country.population}}</td>
+              </tr>
+              <tr>
+                <td> Latitude & Longitude</td>
+                <td>{{country.latlng}}</td>
+              </tr>
+              <tr>
+                <td>Demonym</td>
+                <td>{{country.demonym}}</td>
+              </tr>
+              <tr>
+                <td>Area</td>
+                <td>{{country.area}}</td>
+              </tr>
+              <tr>
+                <td>Gini</td>
+                <td>{{country.gini}}</td>
+              </tr>
+              <tr>
+                <td>Timezones</td>
+                <td>{{country.timezones}}</td>
+              </tr>
+              <tr>
+                <td>Borders</td>
+                <td>{{country.borders}}</td>
+              </tr>
+              <tr>
+                <td>Native Names</td>
+                <td>{{country.nativeName}}</td>
+              </tr>
+              <tr>
+                <td>Numeric Code</td>
+                <td>{{country.numericCode}}</td>
+              </tr>
+              <tr>
+                <td>Currencies</td>
+                <td>
+                  <div *ngFor="let country2 of country.currencies">
+                    <button (click)="onSelectCurrency(country2.name)" type="button" class="btn btn-warning text-center">{{country2.name || defaultValue}}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Languages</td>
+                <td>
+                  <div *ngFor="let country1 of country.languages">
+                    <button (click)="onSelectLanguage(country1.name)" type="button" class=" p-0 btn btn-warning text-center">{{country1.name || defaultValue}}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Translations</td>
+                <td>{{country.translations.de || defaultValue}}, {{country.translations.es || defaultValue}}, {{country.translations.fr
+                  || defaultValue}}, {{country.translations.ja || defaultValue}}, {{country.translations.it || defaultValue}},
+                  {{country.translations.br || defaultValue}}, {{country.translations.pt || defaultValue}}, {{country.translations.nl
+                  || defaultValue}}, {{country.translations.hr || defaultValue}}, {{country.translations.fa || defaultValue}}</td>
+              </tr>
+              <tr>
+                <td>Calling Codes</td>
+                <td>+{{country.callingCodes[0]}}</td>
+              </tr>
+              <tr>
+                <td>Aplha 2 Code</td>
+                <td>{{country.alpha2Code}}</td>
+              </tr>
+              <tr>
+                <td>Aplha 3 Code</td>
+                <td>{{country.alpha3Code}}</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

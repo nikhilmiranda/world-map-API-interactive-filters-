@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" [routerLink]="['/continent']">World</a>
+  <a class="navbar-brand" [routerLink]="['/countryView/Americas']">America</a>
+  <a class="navbar-brand" [routerLink]="['/countryView/Europe']">Europe</a>
+  <a class="navbar-brand" [routerLink]="['/countryView/Asia']">Asia</a>
+  <a class="navbar-brand" [routerLink]="['/countryView/Africa']">Africa</a>
+  <a class="navbar-brand" [routerLink]="['/countryView/Oceania']">Oceania</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<br>
+<footer class="text-center">
+  <div class=" bg-dark text-center fixed-bottom" style="padding: 10px 10px 10px 10px; color: antiquewhite;">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8" style="font-size: 110%; font-weight: 500;">
+        <a>All Rights Reserved</a>
+      </div>
+      <div class="col-2">
+        <a>
+          <button (click)="goBack()" class="btn btn-warning mx-auto d-block">
+            <span> Go Back </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
